@@ -19,7 +19,7 @@ characters,
 
 }) => {
 
-   const heroImageUrl = `/assets/heroes/${ id }.jpg`;
+   const heroImageUrl = `${import.meta.env.BASE_URL}/assets/heroes/${ id }.jpg`;
 
    return(
       <div className="col">
