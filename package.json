@@ -6,7 +6,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "query-string": "^7.1.1",
@@ -23,8 +25,10 @@
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^1.3.0",
     "babel-jest": "^28.1.2",
+    "gh-pages": "^6.3.0",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "homepage": "https://StrengTower90.github.io/Heroes-verse"
   }
 }

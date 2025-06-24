@@ -1,4 +1,5 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate, } from 'react-router-dom';
 import queryString from 'query-string'
 
 import { useForm } from '../../hooks/useForm';
@@ -15,6 +16,10 @@ export const SearchPage = () => {
 
   const showSearch = (q.length === 0);
   const showError  = (q.length > 0) && heroes.length === 0;
+
+  useEffect(() => {
+    console.log(heroes);
+  },[heroes])
 
 
   const { searchText, onInputChange } = useForm({
@@ -51,7 +56,7 @@ export const SearchPage = () => {
                 onChange={ onInputChange }
               />
 
-              <button className="btn btn-outline-primary mt-1">
+              <button type="submit" className="btn btn-outline-primary mt-1">
                 Search
               </button>
             </form>
